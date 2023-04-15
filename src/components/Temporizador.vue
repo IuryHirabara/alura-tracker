@@ -40,12 +40,12 @@ export default defineComponent({
             this.cronometro = setInterval(() => {
                 this.tempoEmSegundos += 1
             }, 1000)
-            console.log('iniciando')
+            // console.log('iniciando')
             this.cronometroRodando = true
         },
         finalizar() {
             clearInterval(this.cronometro)
-            console.log('finalizando')
+            // console.log('finalizando')
             this.cronometroRodando = false
             this.$emit("aoTemporizadorFinalizado", this.tempoEmSegundos)
             this.tempoEmSegundos = 0
